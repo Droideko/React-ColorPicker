@@ -1,15 +1,10 @@
 import { FC } from 'react'
-import { Color } from '../../../../../../interfaces/colorPicker';
+
 import DropdownMenu from '../DropdownMenu';
 
-type DropdownWrapperType = {
-  colors: Array<Color>
-  isOpen: Boolean
-  toggleDropdown: Function
-  handleChangeColor: Function
-}
+import { IColorDropdownWrapper } from '../../../../../../interfaces/colorPicker';
 
-const DropdownWrapper: FC<DropdownWrapperType> = (props) => {
+const DropdownWrapper: FC<IColorDropdownWrapper> = (props) => {
   const { isOpen,  ...otherProps } = props;
 
   if (!isOpen) {

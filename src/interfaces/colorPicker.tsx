@@ -62,3 +62,27 @@ export interface IDropdownWrapper {
   toggleDropdown?: Function
   squareColor: string
 }
+
+export interface IDropdownItem {
+  name: string
+  hex: string
+  onClick?: () => void
+}
+
+export interface IDropdownColor {
+  colors: Array<Color>
+  updateHexColor: Function
+}
+
+export interface IDropdownColorMenu {
+  colors: Array<Color>
+  toggleDropdown: Function
+  handleChangeColor: Function
+}
+
+export interface IColorDropdownWrapper {
+  colors: Array<Color>
+  isOpen: Boolean
+  toggleDropdown: Function
+  handleChangeColor: Function
+}
