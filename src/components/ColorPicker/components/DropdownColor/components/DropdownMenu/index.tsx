@@ -1,15 +1,11 @@
 import { FC, useRef } from 'react';
-import { useOutsideClick } from '../../../../../../hooks/useOutsideClick';
-import { Color } from '../../../../../../interfaces/colorPicker';
+
 import DropdownList from '../DropdownList';
 
-type DropdownMenuType = {
-  colors: Array<Color>
-  toggleDropdown: Function
-  handleChangeColor: Function
-}
+import { useOutsideClick } from '../../../../../../hooks/useOutsideClick';
+import { IDropdownColorMenu } from '../../../../../../interfaces/colorPicker';
 
-const DropdownMenu: FC<DropdownMenuType> = ({ 
+const DropdownMenu: FC<IDropdownColorMenu> = ({ 
   colors, 
   toggleDropdown,
   handleChangeColor 

@@ -1,14 +1,10 @@
-import { FC, useCallback, useState } from 'react'
-import { Color } from '../../../../interfaces/colorPicker';
+import { FC, useCallback, useState } from 'react';
 
 import DropdownWrapper from './components/DropdownWrapper';
 
-type DropdownColorProps = {
-  colors: Array<Color>
-  updateHexColor: Function
-}
+import { IDropdownColor } from '../../../../interfaces/colorPicker';
 
-const DropdownColor: FC<DropdownColorProps> = ({ colors, updateHexColor }) => {
+const DropdownColor: FC<IDropdownColor> = ({ colors, updateHexColor }) => {
   const [ isOpen, updateIsOpen ] = useState(false);
 
   const toggleDropdown = useCallback(() => {
